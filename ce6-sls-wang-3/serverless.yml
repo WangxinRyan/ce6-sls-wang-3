@@ -8,11 +8,17 @@ service: ce6-sls-wang-3
 provider:
   name: aws
   runtime: nodejs20.x
+  region: ap-southeast-1
 
 functions:
   hello:
     handler: handler.hello
+    environment: 
+      Class_Name "CE 6"
     events:
       - httpApi:
           path: /
           method: get
+
+Plugin:
+ - serverless-offline
