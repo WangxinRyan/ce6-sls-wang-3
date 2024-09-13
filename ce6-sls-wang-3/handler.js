@@ -4,7 +4,7 @@ exports.handler = async (event) => {
     body: JSON.stringify(
       {
       message: "Go Serverless v4! Your function executed successfully!",
-      input: event,
+      className: process.env.Class_Name
     },
     null,
     2

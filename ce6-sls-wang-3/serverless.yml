@@ -20,5 +20,15 @@ functions:
           path: /
           method: get
 
+resources:
+  Resources:
+    WangEmailSns:
+      Type: AWS::SNS::Topic
+      Properties:
+        TopicName: wang-email-topic
+        Subscription: 
+          - Protocol: "email"
+            Endpoint: "xin_wang_xin@hotmailcom"
+
 Plugin:
  - serverless-offline
